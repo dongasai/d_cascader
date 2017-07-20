@@ -8,8 +8,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'v-distpicker.js',
-    library: 'VDistpicker',
+    filename: 'index.js',
+    library: 'index',
     libraryTarget: 'umd'
   },
   plugins: [

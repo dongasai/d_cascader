@@ -1,53 +1,43 @@
 <p align="center">
-<img src="https://pigjian.com/images/v-distpicker.png" alt="Powered By Jiajian Chan" width="160">
+  一个灵活的级联选择器
 </p>
-
-<p align="center">A flexible, highly available district selector for picking provinces, cities and districts of China.</p>
 
 <p align="center">
   <br>
-  <b>创造不息，交付不止</b>
+  <b>生命不息，轮子不止</b>
   <br>
-  <a href="https://www.yousails.com">
-    <img src="https://yousails.com/banners/brand.png" width=350>
+  <a href="https://www.2xso.com">
+  哇塞悲哀的博客
   </a>
 </p>
+https://www.npmjs.com/package/d_cascader
+# d_cascader
 
-# V - Distpicker
-
-Here is [documents](http://distpicker.iline.co/)
+ 这里是[文档](https://github.com/dongasai/d_cascader#readme)
 
 ## Installation
 
 ```javascript
-npm install v-distpicker --save
+npm install d_cascader --save
 ```
-
-Or
-
-```javascript
-yarn add v-distpicker --save
-```
-
 ## Usage
-
 **Register component**
 
 Registe global component:
 
 ```javascript
-import Distpicker from 'v-distpicker'
+import d_cascader from 'd_cascader'
 
-Vue.component('v-distpicker', Distpicker)
+Vue.component('d_cascader', d_cascader)
 ```
 
 Registe component:
 
 ```javascript
-import VDistpicker from 'v-distpicker'
+import d_cascader from 'd_cascader'
 
 export default {
-  components: { VDistpicker }
+  components: { d_cascader }
 }
 ```
 
@@ -55,30 +45,67 @@ export default {
 
 Basic:
 
-```javascript
-<v-distpicker></v-distpicker>
+```html
+<d_cascader :cdate="citylist" > 
+</d_cascader>
 ```
+```javascript
+var     citylist=[
+  {
+    id:"0",
+    name:"名字-0"，
+    unid："0"
+  },{
+    id:"1",
+    name:"名字-1"，
+    unid："0"
+  },
+  {
+    id:"2",
+    name:"名字-2"，
+    unid："1"
+  }
+  ,
+  {
+    id:"3",
+    name:"名字-3"，
+    unid："1"
+  }
+];
+```
+
 
 Default Value:
 
-```javascript
-<v-distpicker province="广东省" city="广州市" area="海珠区"></v-distpicker>
+```html
+<v-distpicker :cdate="citylist" :de_value="devalue">
+</v-distpicker>
 ```
-
-Mobile:
-
 ```javascript
-<v-distpicker type="mobile"></v-distpicker>
+var     citylist=[
+  {
+    id:"0",
+    name:"名字-0"，
+    unid："0"
+  },{
+    id:"1",
+    name:"名字-1"，
+    unid："0"
+  },
+  {
+    id:"2",
+    name:"名字-2"，
+    unid："1"
+  }
+  ,
+  {
+    id:"3",
+    name:"名字-3"，
+    unid："1"
+  }
+];
+
+var de_value=[
+  0,3
+];
 ```
-
-## Contributors
-
-- [Jiajian Chan](http://github.com/jcc)
-
-## Thanks
-
-- [Distpicker](https://github.com/fengyuanchen/distpicker)
-
-## License
-
-The plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

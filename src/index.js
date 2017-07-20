@@ -1,3 +1,4 @@
-import VDistpicker from './Distpicker'
-
-export default VDistpicker
+import d_cascader from './d_cascader.vue'
+export default {
+    d_cascader
+}
