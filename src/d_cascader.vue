@@ -11,7 +11,6 @@
 </style>
 <template>
     <div>
-1414
 <!-- d_cascader -->	
         <select v-model="now_value" >
             <option
@@ -34,7 +33,6 @@
     </div>
 </template>
 <script>
-
     export default {
         name: 'd_cascader',
         props: {
@@ -105,7 +103,6 @@
                 }else{
                     var t = this.cdata;
                 }
-                console.log(t);
                 if(this.now_value==null || !(this.now_value in t)){
                     this.now_value=t[Object.keys(t)[0]][this.aiindex];
                 }
@@ -224,4 +221,3 @@
 
     };
 </script>
-
