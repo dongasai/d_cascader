@@ -11,6 +11,8 @@
 </style>
 <template>
     <div>
+1414
+<!-- d_cascader -->	
         <select v-model="now_value" >
             <option
                     v-for="info in  cascade_data"
@@ -32,19 +34,30 @@
     </div>
 </template>
 <script>
+
     export default {
         name: 'd_cascader',
         props: {
-            cdata: {type: [Array, Object], default: []},
+            cdata: {
+                type: [Array, Object],
+                default(){
+                    let dd=[{
+                        id: "1",
+                        name: "默认项",
+                        upid: "0",
+                    }];;
+                   return  dd;
+                }
+            },
             upindex: {
                 type: String,
-                default () {
+                default() {
                     return 'upid';
                 }
             },
             d_type: {
                 type: String,
-                default () {
+                default() {
                     return 'list';
                 }
             },
@@ -64,9 +77,9 @@
                 type: Number,
                 default: 999
             },
-            de_value:{
+            de_value: {
                 type: Array,
-                default(){
+                default() {
                     return [];
                 }
             }
@@ -92,6 +105,7 @@
                 }else{
                     var t = this.cdata;
                 }
+                console.log(t);
                 if(this.now_value==null || !(this.now_value in t)){
                     this.now_value=t[Object.keys(t)[0]][this.aiindex];
                 }
@@ -204,10 +218,10 @@
         mounted: function () {
             //chuangji
             this.de_value_set();
-
         },
         updated: function () {
         }
 
     };
 </script>
+
